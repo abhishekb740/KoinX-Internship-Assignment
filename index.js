@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const { connectDB } = require("./config/db");
+const Transaction = require("./models/Transaction");
+const EthereumPrice = require("./models/EthereumPrices");
 
 app.use(express.json());
 connectDB();
