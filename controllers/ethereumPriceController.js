@@ -1,4 +1,3 @@
-// controllers/ethereumPriceController.js
 const EthereumPrice = require("../models/EthereumPrices");
 const fetch = require("node-fetch").default;
 

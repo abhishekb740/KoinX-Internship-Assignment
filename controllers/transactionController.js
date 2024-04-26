@@ -1,4 +1,3 @@
-// controllers/transactionController.js
 const Transaction = require("../models/Transaction");
 const fetch = require("node-fetch").default;
 
