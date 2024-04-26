@@ -14,6 +14,9 @@ connectDB();
 
 cron.schedule("*/10 * * * *", fetchAndStoreEthereumPrice);
 
+app.get("/",  (req, res) => {
+    res.send("API Working!");
+})
 app.get("/getNormalTransactions/:address",  getNormalTransactions);
 app.get("/getUserDetails/:address",  getUserDetails);
 
