@@ -6,7 +6,6 @@ const ethereumPriceUrl = "https://api.coingecko.com/api/v3/simple/price?ids=ethe
 const fetchAndStoreEthereumPrice = async () => {
     try {
         const ethereumPriceResponse = await fetch(ethereumPriceUrl);
-        console.log(ethereumPriceResponse);
         if (!ethereumPriceResponse.ok) {
             throw new Error("Failed to fetch Ethereum price");
         }

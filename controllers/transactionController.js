@@ -64,6 +64,7 @@ const getUserDetails = async (req, res, next) => {
         balance = balance/Math.pow(10, 18);
 
         const ethereumPriceResponse = await fetch(ethereumPriceUrl);
+        console.log(ethereumPriceResponse);
         if (!ethereumPriceResponse.ok) {
             throw new Error("Failed to fetch Ethereum price");
         }
