@@ -6,6 +6,7 @@ const ethereumPriceUrl = "https://api.coingecko.com/api/v3/simple/price?ids=ethe
 const fetchAndStoreEthereumPrice = async () => {
     try {
         const ethereumPriceResponse = await fetch(ethereumPriceUrl);
+        console.log(ethereumPriceResponse);
         if (!ethereumPriceResponse.ok) {
             throw new Error("Failed to fetch Ethereum price");
         }
@@ -18,7 +19,7 @@ const fetchAndStoreEthereumPrice = async () => {
         console.log(ethereumPrice);
     } catch (error) {
         console.error("Error fetching and storing Ethereum price:", error.message);
-        res.status(500).json({ error: "Failed to fetch and store Ethereum price" }); // Send an error response to the client
+        res.status(500).json({ error: "Failed to fetch and store Ethereum price" });
     }
 };
 
